@@ -1,4 +1,5 @@
 import Iter "mo:base/Iter";
+import Text "mo:base/Text";
 import List "mo:base/List";
 import Time "mo:base/Time";
 import Bool "mo:base/Bool";
