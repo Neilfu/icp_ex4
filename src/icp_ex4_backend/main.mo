@@ -3,6 +3,7 @@ import List "mo:base/List";
 import Time "mo:base/Time";
 import Bool "mo:base/Bool";
 import Principal "mo:base/Principal";
+import Debug "mo:base/Debug";
 actor {
   public type Message = {
     text: Text;
@@ -29,8 +30,13 @@ actor {
 
   stable var messages: List.List<Message> = List.nil();
 
+  public shared query (msg) func getId(): async Text{
+    Principal.toText(msg.caller);
+  };
+
   public shared (msg) func post(text:Text): async() {
-    assert(Principal.toText(msg.caller) == "emych-ohdbh-xkbom-aqtdz-l26vk-xwgtf-ihc3w-nf6mn-daafx-7y2o5-vae");
+    Debug.print(Principal.toText(msg.caller));
+    assert(Principal.toText(msg.caller) == "2vxsx-fae");
     messages := List.push({text=text;time=Time.now()}, messages);
 
   };
