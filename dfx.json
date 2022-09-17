@@ -2,18 +2,13 @@
   "version": 1,
   "dfx": "0.11.1",
   "canisters": {
-    "icp_ex4_backend": {
+    "microblog": {
       "type": "motoko",
       "main": "src/icp_ex4_backend/main.mo"
     },
-    "icp_ex4_frontend": {
-      "type": "assets",
-      "source": [
-        "src/icp_ex4_frontend/assets"
-      ],
-      "dependencies": [
-        "icp_ex4_backend"
-      ]
+    "microblog2": {
+      "type": "motoko",
+      "main": "src/icp_ex4_backend/main.mo"
     }
   },
   "defaults": {
